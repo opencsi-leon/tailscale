@@ -67,7 +67,7 @@ Manage the Tailscale setting from the [Admin page](https://login.tailscale.com/a
 
 #### Tag Lan to Lan
 
-Run the container in lan to lan tag to connect 2 or more lan
+Run the container in lan to lan tag to connect 2 or more site
 
 Site1 (Lan 192.168.0.0)
 
