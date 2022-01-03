@@ -20,7 +20,7 @@ Zero config VPN. Installs on any device in minutes, manages firewall rules for y
 #### Prerequisites
 
 * Auth key from <https://login.tailscale.com/admin/authkeys> (`tskey-12345...`)
-* Enable Linux IP forwarding:
+* Enable Linux IP forwarding on Docker Host:
 
   ```
   sudo nano /etc/sysctl.conf
