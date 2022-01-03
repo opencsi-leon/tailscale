@@ -119,22 +119,22 @@ In each site enable the route to the docker host running the container.
 on site1: 
 
 ```
-route add <lan sito2> mask 255.255.255.0 <IP Docker Host on site1>
-route add <lan sito3> mask 255.255.255.0 <IP Docker Host on site1>
+route add <lan site2> mask 255.255.255.0 <IP Docker Host on site1>
+route add <lan site3> mask 255.255.255.0 <IP Docker Host on site1>
 ```
 
 on site2: 
 
 ```
-route add <lan sito1> mask 255.255.255.0 <IP Docker Host on site2>
-route add <lan sito3> mask 255.255.255.0 <IP Docker Host on site2>
+route add <lan site1> mask 255.255.255.0 <IP Docker Host on site2>
+route add <lan site3> mask 255.255.255.0 <IP Docker Host on site2>
 ```
 
 on site3: 
 
 ```
-route add <lan sito1> mask 255.255.255.0 <IP Docker Host on site3>
-route add <lan sito2> mask 255.255.255.0 <IP Docker Host on site3>
+route add <lan site1> mask 255.255.255.0 <IP Docker Host on site3>
+route add <lan site2> mask 255.255.255.0 <IP Docker Host on site3>
 ```
 
 #### Credit
