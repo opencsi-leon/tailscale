@@ -19,7 +19,7 @@ jobs:
         image: opencsi/tailscale
         registry: docker.io
         tags: latest,1.24.2
-        dockerfile: Dockerfile
+        dockerfile: .
         platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
@@ -30,7 +30,7 @@ jobs:
         image: opencsi/tailscale
         registry: docker.io
         tags: stable-LantoLan,1.24.2
-        dockerfile: ./LantoLan/Dockerfile
+        dockerfile: ./LantoLan/
         platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
