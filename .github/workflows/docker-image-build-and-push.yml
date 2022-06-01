@@ -8,29 +8,37 @@ on:
 
 jobs:
 
-  build:
-
+  docker:
     runs-on: ubuntu-latest
-
     steps:
-    - name: Build and Push the Docker image
-      uses: mr-smithers-excellent/docker-build-push@v5
-      with:
-        image: opencsi/tailscale
-        registry: docker.io
-        tags: latest,1.24.2
-        dockerfile: .
-        platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
-    
-    - name: Build and Push the Docker image Lan
-      uses: mr-smithers-excellent/docker-build-push@v5
-      with:
-        image: opencsi/tailscale
-        registry: docker.io
-        tags: stable-LantoLan,1.24.2
-        dockerfile: ./LantoLan/
-        platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
-        username: ${{ secrets.DOCKER_USERNAME }}
-        password: ${{ secrets.DOCKER_PASSWORD }}
+      -
+        name: Checkout
+        uses: actions/checkout@v2
+      -
+        name: Set up QEMU
+        uses: docker/setup-qemu-action@v2
+      -
+        name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
+      -
+        name: Login to DockerHub
+        uses: docker/login-action@v2
+        with:
+          username: ${{ secrets.DOCKER_USERNAME }}
+          password: ${{ secrets.DOCKER_PASSWORD }}
+      -
+        name: Build and push
+        uses: docker/build-push-action@v3
+        with:
+          context: .
+          push: true
+          tags: opencsi/tailscale:latest,opencsi/tailscale:1.24.2
+          platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
+      -
+        name: Build and push Lan
+        uses: docker/build-push-action@v3
+        with:
+          context: ./LantoLan
+          push: true
+          tags: opencsi/tailscale:stable-LantoLan,opencsi/tailscale:1.24.2-LantoLan
+          platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
