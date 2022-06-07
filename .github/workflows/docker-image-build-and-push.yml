@@ -32,7 +32,7 @@ jobs:
         with:
           context: .
           push: true
-          tags: opencsi/tailscale:latest,opencsi/tailscale:1.26.0
+          tags: opencsi/tailscale:stable,opencsi/tailscale:1.24.2
           platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
       -
         name: Build and push Lan
@@ -40,5 +40,5 @@ jobs:
         with:
           context: ./LantoLan
           push: true
-          tags: opencsi/tailscale:stable-LantoLan,opencsi/tailscale:1.26.0-LantoLan
+          tags: opencsi/tailscale:stable-LantoLan,opencsi/tailscale:1.24.2-LantoLan
           platforms: linux/amd64,linux/arm64,linux/arm/v7,linux/arm/v6
