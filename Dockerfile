@@ -1,7 +1,11 @@
 FROM alpine:3.16 AS builder
 
 ARG CHANNEL=stable
+<<<<<<< HEAD
 ARG VERSION=1.36.0
+=======
+ARG VERSION=1.36.1
+>>>>>>> latest
 ARG TARGETARCH
 ARG ARCH=$TARGETARCH
 
