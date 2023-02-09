@@ -1,11 +1,7 @@
 name: Docker Image CI
 
 env:
-<<<<<<< HEAD
-  LATEST_VERSION: '1.36.0'
-=======
   LATEST_VERSION: '1.36.1'
->>>>>>> latest
 
 on:
   push:
