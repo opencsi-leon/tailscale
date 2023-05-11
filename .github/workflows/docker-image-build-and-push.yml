@@ -2,7 +2,10 @@ name: Docker Image CI
 
 env:
   LATEST_VERSION: '1.40.0'
+<<<<<<< HEAD
 
+=======
+>>>>>>> 566f767389de66a9507811856d58325a424dc9f2
 on:
   push:
     branches: [ main ]
