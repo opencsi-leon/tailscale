@@ -1,7 +1,7 @@
 name: Docker Image CI
 
 env:
-  LATEST_VERSION: '1.66.0'
+  LATEST_VERSION: '1.66.1'
 on:
   push:
     branches: [main]
