@@ -3,7 +3,7 @@
 * **Maintained by**: [Leon](https://github.com/opencsi-leon/tailscale)
 
 ## Tags
-
+ 
 * [latest](https://hub.docker.com/layers/opencsi/tailscale/latest/images/sha256-a8e67e28d9877cb62dd0bffe1b74f910c745f80198e05437f52763256353f35a?context=explore), [stable](https://hub.docker.com/layers/opencsi/tailscale/stable/images/sha256-9949db51b5edde8ed82e5eefb2a471e37aff14cc08500a4b92dfd697b0c9a454?context=explore), [1.18.2](https://hub.docker.com/layers/opencsi/tailscale/1.18.2/images/sha256-9949db51b5edde8ed82e5eefb2a471e37aff14cc08500a4b92dfd697b0c9a454?context=explore)
 
 
